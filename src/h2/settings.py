@@ -30,7 +30,9 @@ if sys.version_info.major >= 3 and sys.version_info.minor >= 10:
 else:
     import collections
 
-
+ENABLE_PUSH
+    
+    
 class SettingCodes(enum.IntEnum):
     """
     All known HTTP/2 setting codes.
@@ -68,6 +70,15 @@ class SettingCodes(enum.IntEnum):
     #: client set this to 1.
     ENABLE_CONNECT_PROTOCOL = SettingsFrame.ENABLE_CONNECT_PROTOCOL
 
+
+HEADER_TABLE_SIZE = SettingsFrame.HEADER_TABLE_SIZE
+ENABLE_PUSH = SettingsFrame.ENABLE_PUSH
+MAX_CONCURRENT_STREAMS = SettingsFrame.MAX_CONCURRENT_STREAMS
+INITIAL_WINDOW_SIZE = SettingsFrame.INITIAL_WINDOW_SIZE
+MAX_FRAME_SIZE = SettingsFrame.MAX_FRAME_SIZE
+MAX_HEADER_LIST_SIZE = SettingsFrame.MAX_HEADER_LIST_SIZE
+ENABLE_CONNECT_PROTOCOL = SettingsFrame.ENABLE_CONNECT_PROTOCOL
+    
 
 def _setting_code_from_int(code):
     """
