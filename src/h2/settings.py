@@ -29,9 +29,6 @@ if sys.version_info.major >= 3 and sys.version_info.minor >= 10:
     collections.MutableMapping = abc.MutableMapping
 else:
     import collections
-
-ENABLE_PUSH
-    
     
 class SettingCodes(enum.IntEnum):
     """
